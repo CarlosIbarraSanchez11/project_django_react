@@ -21,3 +21,10 @@ winpty python manage.py createsuperuser
 
 ## 
 pip install coreapi -> creara otro modulo adicional
+
+
+## Comenzamos a hacer el Front end con REACT
+npm create vite  -> creamos nuestra carpeta client
+Dentro de la carpeta client, colocamos -> npm install
+# Instalamos nuestros modulos
+npm install react-router-dom react-hot-toast axios react-hook-form
