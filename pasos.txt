@@ -1,0 +1,23 @@
+entorno virtual -> pip install virtualenv
+python -m venv env
+source env/Scripts/activate
+pip install django
+django-admin startproject django_crud_api . (siempre el punto para que de cree en la misma carpeta no en otra)
+python manage.py runserver -> Se muestra nuestro proyecto de python
+python manage.py startapp tasks -> 
+python manage.py migrate -> creamos todas las tablas que el proyecto necesita
+
+## Configurando django rest framework
+pip install djangorestframework
+
+pip install django-cors-headers -> Modulo para que el Backend se comunique con el Frontend (quien puede conectarse a nuestro Backend)
+
+## creamos nuestra clase en tasks archivo models.py
+de ahi migramos las tablas -> python manage.py makemigrations tasks
+python manage.py migrate tasks
+
+## Creamos nuestro superusuario 
+winpty python manage.py createsuperuser
+
+## 
+pip install coreapi -> creara otro modulo adicional
