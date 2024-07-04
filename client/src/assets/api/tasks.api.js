@@ -6,6 +6,11 @@ const tasksApi = axios.create({
 export const getAllTasks = () =>
   // return axios.get("http://127.0.0.1:8000/tasks/api/v1/tasks/");
   tasksApi.get("/");
+
+export const getTask = (id) => {
+  return tasksApi.get(`/${id}/`);
+};
+
 export const createTask = (task) => {
   // return axios.post("http://127.0.0.1:8000/tasks/api/v1/tasks/");
   return tasksApi.post("/", task);
@@ -13,4 +18,8 @@ export const createTask = (task) => {
 
 export const deleteTask = (id) => {
   return tasksApi.delete(`/${id}`); // Concatenar para eliminar el id /tasks/api/v1/tasks/1
+};
+
+export const updateTask = (id, task) => {
+  return tasksApi.put(`/${id}/`, task);
 };
